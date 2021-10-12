@@ -1,8 +1,14 @@
+import styled from 'styled-components';
+
+const Link = styled.a`
+  user-select: none;
+`;
+
 const Logo = () => {
   return (
-    <a href="/">
+    <Link href="/">
       <img alt="logo" src="/img/logo_green.png" objectFit="fill" layout="fill" quality={100} width={165} height={32} />
-    </a>
+    </Link>
   );
 };
 export default Logo;
