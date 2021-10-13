@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Logo from './Logo.js';
 import SearchForm from './SearchForm.js';
+import Service from './Service.js';
 
 const BackGround = styled.div`
   width: 100%;
@@ -29,6 +30,7 @@ const Header = () => {
         <Contents>
           <Logo />
           <SearchForm />
+          <Service />
         </Contents>
       </WrapContents>
     </BackGround>
