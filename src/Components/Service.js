@@ -46,6 +46,9 @@ const SetStartPageLink = styled.div`
   a {
     font-size: 11px;
   }
+  a:hover {
+    text-decoration: underline;
+  }
   a:visited {
     color: #404040;
   }
