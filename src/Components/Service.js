@@ -1,11 +1,19 @@
 import styled from 'styled-components';
 
+const Contents = styled.div`
+  align-self: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+`;
+
 const Junior = styled.a`
-  font-family: 'Jua';
-  text-decoration: none;
-  user-select: none;
   color: #ccd1d1;
-  font-size: 14px;
+  font-family: 'Jua';
+  font-size: 13px;
+  margin: 5px 10px 0;
+
   :hover span:nth-child(1) {
     color: #03a9f4;
   }
@@ -20,16 +28,27 @@ const Junior = styled.a`
   }
 `;
 
+const HappyBean = styled.a`
+  color: #ccd1d1;
+  font-family: 'Hahmlet';
+  font-size: 12px;
+
+  :hover {
+    color: #19ce60;
+  }
+`;
+
 const Service = () => {
   return (
-    <div>
+    <Contents>
       <Junior href="https://jr.naver.com/">
         <span>쥬</span>
         <span>니</span>
         <span>어</span>
         <span>네이버</span>
       </Junior>
-    </div>
+      <HappyBean href="https://happybean.naver.com/">해피빈</HappyBean>
+    </Contents>
   );
 };
 
