@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Keyboard from './Keyboard.js';
+import ExpandArrow from './ExpandArrow.js';
 
 const SearchStyle = styled.div`
   width: 600px;
@@ -23,6 +24,7 @@ const SearchForm = () => {
       <form action="/" method="get" name="serach" />
       <Input type="text" form="search" id="header-search" name="search" />
       <Keyboard />
+      <ExpandArrow />
     </SearchStyle>
   );
 };
