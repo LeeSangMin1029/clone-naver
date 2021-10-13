@@ -11,6 +11,9 @@ const GlobalStyle = createGlobalStyle`
     padding: 0px;
     margin: 0px;
   }
+  button, input {
+    border: 0;
+  }
 `;
 
 const App = () => {
