@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import Logo from './Logo.js';
+import SearchForm from './SearchForm.js';
 
 const BackGround = styled.div`
   width: 100%;
-  background-color: #fff;
   height: 160px;
+  background-color: #fff;
   border-bottom: 1px solid #e4e8eb;
 `;
 
@@ -27,6 +28,7 @@ const Header = () => {
       <WrapContents>
         <Contents>
           <Logo />
+          <SearchForm />
         </Contents>
       </WrapContents>
     </BackGround>
