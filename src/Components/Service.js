@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import ArrowToSetStartingPage from './ArrowToSetStartingPage.js';
 
 const Contents = styled.div`
   align-self: flex-start;
@@ -38,9 +39,25 @@ const HappyBean = styled.a`
   }
 `;
 
+const SetStartPageLink = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    font-size: 11px;
+  }
+  a:visited {
+    color: #404040;
+  }
+`;
+
 const Service = () => {
   return (
     <Contents>
+      <SetStartPageLink>
+        <a href="https://help.naver.com/support/contents/contents.help?serviceNo=1074&categoryNo=16719">네이버를 시작페이지로</a>
+        <ArrowToSetStartingPage />
+      </SetStartPageLink>
       <Junior href="https://jr.naver.com/">
         <span>쥬</span>
         <span>니</span>
