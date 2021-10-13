@@ -14,6 +14,10 @@ const GlobalStyle = createGlobalStyle`
   button, input {
     border: 0;
   }
+  a {
+    user-select: none;
+    text-decoration: none;
+  }
 `;
 
 const App = () => {
