@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const Link = styled.a`
   user-select: none;
+  margin: 20px;
 `;
 
 const Logo = () => {
