@@ -7,6 +7,9 @@ const KeyboardStyle = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
+  &:hover > svg {
+    fill: #b2babb;
+  }
 `;
 
 const Keyboard = () => {
