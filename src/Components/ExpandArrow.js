@@ -28,8 +28,8 @@ const ArrowStyle = styled.div`
 const ExpandArrow = () => {
   return (
     <ArrowStyle>
-      <EmptyInput type="checkbox" id="menu" />
-      <label for="menu">
+      <EmptyInput type="checkbox" id="menu-button" />
+      <label htmlFor="menu-button">
         <DownArrow width="12px" height="12px" fill="#19ce60" />
       </label>
     </ArrowStyle>
