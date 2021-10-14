@@ -25,10 +25,10 @@ const ArrowStyle = styled.div`
   }
 `;
 
-const ExpandArrow = () => {
+const ExpandArrow = ({ toggleMenu }) => {
   return (
     <ArrowStyle>
-      <EmptyInput type="checkbox" id="menu-button" />
+      <EmptyInput type="checkbox" id="menu-button" onChange={toggleMenu} />
       <label htmlFor="menu-button">
         <DownArrow width="12px" height="12px" fill="#19ce60" />
       </label>
