@@ -1,31 +1,18 @@
-import { createGlobalStyle } from 'styled-components';
+import { useState } from 'react';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyles, lightTheme, darkTheme } from './themes.js';
 import Header from './Components/Header.js';
 
-const GlobalStyle = createGlobalStyle`
-  body{
-    padding : 0px;
-    margin: 0px;
-    box-sizing : border-box;
-  }
-  *{
-    padding: 0px;
-    margin: 0px;
-  }
-  button, input {
-    border: 0;
-  }
-  a {
-    user-select: none;
-    text-decoration: none;
-  }
-`;
-
 const App = () => {
+  const [theme, setTheme] = useState('light');
+  const themeToggler = () => {
+    theme === 'light' ? setTheme('dark') : setTheme('light');
+  };
   return (
-    <>
+    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+      <GlobalStyles />
       <Header />
-      <GlobalStyle />
-    </>
+    </ThemeProvider>
   );
 };
 

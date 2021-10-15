@@ -11,9 +11,11 @@ const SearchStyle = styled.div`
   border: 2px solid #19ce60;
   display: flex;
   align-items: center;
+  background-color: ${({ theme }) => theme.header};
 `;
 
 const Input = styled.input`
+  background-color: inherit;
   height: 100%;
   outline: 0;
   font-size: 18px;

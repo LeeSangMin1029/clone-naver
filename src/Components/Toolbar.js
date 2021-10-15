@@ -16,19 +16,19 @@ const Menu = styled.div`
   height: 40px;
   top: 28px;
   border-radius: 0 0 5px 5px;
-  border: 1px solid #e4e8eb;
-  background-color: #f8f9f9;
+  border: 1px solid ${({ theme }) => theme.borderBottom};
+  background-color: ${({ theme }) => theme.toolbarBackground};
   a:hover {
     text-decoration: underline;
   }
-  box-shadow: 0px 2px 3px 1px #d0d3d9;
+  box-shadow: 0px 2px 3px 1px ${({ theme }) => theme.toolbarShadow};
 `;
 
 const UserTool = styled.div`
   padding-left: 10px;
   // 도움말 링크
   span:nth-child(1) a {
-    color: grey;
+    color: ${({ theme }) => theme.toolbar};
   }
   // 신고 링크
   span:nth-child(2) a {
@@ -41,7 +41,7 @@ const ACTOffMenu = styled.div`
   padding-right: 10px;
   // 자동완성 끄기 링크
   a {
-    color: grey;
+    color: ${({ theme }) => theme.toolbar};
   }
 `;
 
