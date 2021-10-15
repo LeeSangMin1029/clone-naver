@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import ArrowToSetStartingPage from './ArrowToSetStartingPage.js';
 
 const Contents = styled.div`
   align-self: flex-start;
@@ -45,12 +44,29 @@ const SetStartPageLink = styled.div`
   align-items: center;
   a {
     font-size: 11px;
+    color: ${({ theme }) => theme.startLinkColor};
   }
   a:hover {
     text-decoration: underline;
   }
-  a:visited {
-    color: #404040;
+  a:after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f054';
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    margin: 0 5px;
+    box-shadow: 0px 2px 3px 1px ${({ theme }) => theme.startLinkShadow};
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    font-size: 0.5rem;
+    line-height: 1.5;
+    background-color: ${({ theme }) => theme.bg_startLink};
   }
 `;
 
@@ -59,7 +75,6 @@ const Service = () => {
     <Contents>
       <SetStartPageLink>
         <a href="https://help.naver.com/support/contents/contents.help?serviceNo=1074&categoryNo=16719">네이버를 시작페이지로</a>
-        <ArrowToSetStartingPage />
       </SetStartPageLink>
       <Junior href="https://jr.naver.com/">
         <span>쥬</span>
