@@ -10,6 +10,7 @@ export const lightTheme = {
   toolbar: 'grey',
   toolbarBackground: '#f8f9f9',
   toolbarShadow: '#d0d3d9',
+  inputColor: '#000',
 };
 
 export const darkTheme = {
@@ -22,6 +23,7 @@ export const darkTheme = {
   toolbar: '#8f8f8f',
   toolbarBackground: '#242527',
   toolbarShadow: '#212121',
+  inputColor: '#fff',
 };
 
 export const GlobalStyles = createGlobalStyle`

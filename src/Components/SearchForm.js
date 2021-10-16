@@ -21,6 +21,7 @@ const Input = styled.input`
   font-size: 18px;
   margin: 0 12px;
   flex: 1;
+  color: ${({ theme }) => theme.inputColor};
 `;
 
 const SearchForm = () => {
