@@ -12,9 +12,9 @@ const Menu = styled.div`
   font-size: 13px;
   position: absolute;
   z-index: 100;
-  width: 602px;
+  width: 600px;
   height: 40px;
-  top: 28px;
+  top: 26px;
   border-radius: 0 0 5px 5px;
   border: 1px solid ${({ theme }) => theme.borderBottom};
   background-color: ${({ theme }) => theme.toolbarBackground};
