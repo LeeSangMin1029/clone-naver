@@ -55,7 +55,7 @@ const CustomLink = ({ href, string }) => {
 
 const Toolbar = ({ isOpen }) => {
   return (
-    <ATCSidebar id="tool">
+    <ATCSidebar>
       <Menu isOpen={isOpen}>
         <UserTool>
           <CustomLink href="https://help.naver.com/support/service/main.help?serviceNo=605&categoryNo=1987" string="도움말" />
