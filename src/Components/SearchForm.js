@@ -34,11 +34,11 @@ const SearchForm = () => {
   };
   return (
     <SearchStyle>
-      <Toolbar isOpen={isOpen} />
+      <Toolbar isOpen={isOpen} setMenu={setMenu} />
       <form action="/" method="get" name="serach" />
       <Input type="text" form="search" id="header-search" name="search" />
       <Keyboard />
-      <ExpandArrow toggleMenu={toggleMenu} />
+      <ExpandArrow toggleMenu={toggleMenu} isOpen={isOpen} />
       <SearchButton />
     </SearchStyle>
   );

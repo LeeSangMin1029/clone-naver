@@ -1,4 +1,6 @@
+import { useRef } from 'react';
 import styled from 'styled-components';
+import useOutsideAlerter from './OutsideAlerter.js';
 
 const ATCSidebar = styled.div`
   position: relative;
@@ -53,10 +55,18 @@ const CustomLink = ({ href, string }) => {
   );
 };
 
-const Toolbar = ({ isOpen }) => {
+const Toolbar = ({ isOpen, setMenu }) => {
+  const toggleMenu = (e) => {
+    const arrow = document.getElementById('arrow-icon');
+    if (e.target === arrow || e.target === arrow.childNodes[0]) return;
+    setMenu(false);
+  };
+
+  const wrapperRef = useRef(null);
+  useOutsideAlerter(wrapperRef, toggleMenu);
   return (
     <ATCSidebar>
-      <Menu isOpen={isOpen}>
+      <Menu isOpen={isOpen} ref={wrapperRef}>
         <UserTool>
           <CustomLink href="https://help.naver.com/support/service/main.help?serviceNo=605&categoryNo=1987" string="도움말" />
           <CustomLink href="https://help.naver.com/support/contents/contents.help?serviceNo=605&categoryNo=18215" string="신고" />
