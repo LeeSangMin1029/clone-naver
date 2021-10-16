@@ -12,6 +12,9 @@ const SearchStyle = styled.div`
   display: flex;
   align-items: center;
   background-color: ${({ theme }) => theme.header};
+  :focus-within {
+    box-shadow: 0px 2px 9px 0px rgba(0 0 0/ 10%);
+  }
 `;
 
 const Input = styled.input`
