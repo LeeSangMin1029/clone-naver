@@ -6,7 +6,7 @@ import { MenuProvider } from './Context/useMenuContext.js';
 
 const BackGround = styled.div`
   width: 100%;
-  height: 160px;
+  height: 161px;
   background-color: ${({ theme }) => theme.header};
   border-bottom: 1px solid ${({ theme }) => theme.borderBottom};
 `;
