@@ -14,7 +14,7 @@ const Menu = styled.div`
   font-size: 13px;
   position: absolute;
   z-index: 100;
-  width: 600px;
+  width: 620px;
   height: 40px;
   top: 26px;
   border-radius: 0 0 5px 5px;
