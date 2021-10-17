@@ -11,6 +11,7 @@ export const lightTheme = {
   toolbarBackground: '#f8f9f9',
   toolbarShadow: '#d0d3d9',
   inputColor: '#000',
+  menuWordColor: '#000',
 };
 
 export const darkTheme = {
@@ -24,6 +25,7 @@ export const darkTheme = {
   toolbarBackground: '#242527',
   toolbarShadow: '#212121',
   inputColor: '#fff',
+  menuWordColor: '#fff',
 };
 
 export const GlobalStyles = createGlobalStyle`
