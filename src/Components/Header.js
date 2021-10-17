@@ -10,7 +10,11 @@ const StyledHeader = styled.div`
   background-color: ${({ theme }) => theme.header};
 `;
 
-const WrapContents = styled.div`
+const WrapperTopHeader = styled.div`
+  border-bottom: 1px solid ${({ theme }) => theme.borderBottom};
+`;
+
+const StyledTopHeader = styled.div`
   width: 1190px;
   height: 160px;
   margin: 0 auto;
@@ -27,17 +31,20 @@ const Contents = styled.div`
 const Header = () => {
   return (
     <StyledHeader>
-      <WrapContents>
-        <Contents>
-          <Logo />
-          <MenuProvider>
-            <SearchForm />
-          </MenuProvider>
-          <Service />
-        </Contents>
-      </WrapContents>
+      <WrapperTopHeader>
+        <StyledTopHeader>
+          <Contents>
+            <Logo />
+            <MenuProvider>
+              <SearchForm />
+            </MenuProvider>
+            <Service />
+          </Contents>
+        </StyledTopHeader>
+      </WrapperTopHeader>
       <HeaderMenu />
     </StyledHeader>
   );
 };
+
 export default Header;
