@@ -12,6 +12,13 @@ export const lightTheme = {
   toolbarShadow: '#d0d3d9',
   inputColor: '#000',
   menuWordColor: '#000',
+  themeContent: '\f186',
+  bg_themeBtn: '#fff',
+  bg_themeBtnHover: '#404040',
+  themeBtnImg: '#5e6267',
+  themeBtnWordHover: '#d4d4d4',
+  themeBtnWord: '#2c2c2c',
+  themeBtnImgHover: '#fce303',
 };
 
 export const darkTheme = {
@@ -26,6 +33,13 @@ export const darkTheme = {
   toolbarShadow: '#212121',
   inputColor: '#fff',
   menuWordColor: '#fff',
+  themeContent: '\f185',
+  bg_themeBtn: '#333638',
+  bg_themeBtnHover: '#53575c',
+  themeBtnImg: '#c2c9d1',
+  themeBtnWordHover: '#d4d4d4',
+  themeBtnWord: '#d5d5d5',
+  themeBtnImgHover: '#00f557',
 };
 
 export const GlobalStyles = createGlobalStyle`
