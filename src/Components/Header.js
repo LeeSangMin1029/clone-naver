@@ -4,16 +4,14 @@ import SearchForm from './SearchForm.js';
 import Service from './Service.js';
 import { MenuProvider } from './Context/useMenuContext.js';
 
-const BackGround = styled.div`
+const StyledHeader = styled.div`
   width: 100%;
-  height: 161px;
   background-color: ${({ theme }) => theme.header};
-  border-bottom: 1px solid ${({ theme }) => theme.borderBottom};
 `;
 
 const WrapContents = styled.div`
   width: 1190px;
-  height: 100%;
+  height: 160px;
   margin: 0 auto;
   padding: 0 30px;
 `;
@@ -27,7 +25,7 @@ const Contents = styled.div`
 
 const Header = () => {
   return (
-    <BackGround>
+    <StyledHeader>
       <WrapContents>
         <Contents>
           <Logo />
@@ -37,7 +35,7 @@ const Header = () => {
           <Service />
         </Contents>
       </WrapContents>
-    </BackGround>
+    </StyledHeader>
   );
 };
 export default Header;
