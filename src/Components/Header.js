@@ -3,6 +3,7 @@ import Logo from './Logo.js';
 import SearchForm from './SearchForm.js';
 import Service from './Service.js';
 import { MenuProvider } from './Context/useMenuContext.js';
+import HeaderMenu from './HeaderMenu.js';
 
 const StyledHeader = styled.div`
   width: 100%;
@@ -35,6 +36,7 @@ const Header = () => {
           <Service />
         </Contents>
       </WrapContents>
+      <HeaderMenu />
     </StyledHeader>
   );
 };
