@@ -6,7 +6,7 @@ import Toolbar from './Toolbar.js';
 import { useMenuContext } from './Context/useMenuContext.js';
 
 const SearchStyle = styled.div`
-  width: 600px;
+  width: 620px;
   height: 52px;
   border: 2px solid #19ce60;
   display: flex;

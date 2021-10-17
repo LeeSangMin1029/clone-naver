@@ -12,7 +12,7 @@ const BackGround = styled.div`
 `;
 
 const WrapContents = styled.div`
-  width: 1130px;
+  width: 1190px;
   height: 100%;
   margin: 0 auto;
   padding: 0 30px;
