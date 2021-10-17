@@ -1,18 +1,15 @@
-import { useState } from 'react';
-import { ThemeProvider } from 'styled-components';
-import { GlobalStyles, lightTheme, darkTheme } from './themes.js';
+import { GlobalStyles } from './themes.js';
 import Header from './Components/Header.js';
+import Container from './Components/Container.js';
+import { WrapperThemeProvider } from './Components/Context/useThemeContext.js';
 
 const App = () => {
-  const [theme, setTheme] = useState('light');
-  const themeToggler = () => {
-    theme === 'light' ? setTheme('dark') : setTheme('light');
-  };
   return (
-    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+    <WrapperThemeProvider>
       <GlobalStyles />
       <Header />
-    </ThemeProvider>
+      <Container />
+    </WrapperThemeProvider>
   );
 };
 
