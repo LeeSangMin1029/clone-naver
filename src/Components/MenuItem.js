@@ -8,6 +8,7 @@ const StyledListItem = styled.li`
 const StyledLink = styled.a`
   text-decoration: none;
   font-weight: 700;
+  font-size: 15px;
   color: ${({ theme }) => theme.menuWordColor};
   &.color {
     color: #19ce60;
