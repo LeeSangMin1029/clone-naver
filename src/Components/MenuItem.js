@@ -13,6 +13,40 @@ const StyledLink = styled.a`
   &.color {
     color: #19ce60;
   }
+  &.mail:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f658';
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    margin-right: 5px;
+  }
+
+  &.live:after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f550';
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    margin-left: 5px;
+  }
+  &.tv:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f04b';
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    margin-right: 5px;
+  }
 `;
 
 const MenuItem = ({ children, href, className }) => {
