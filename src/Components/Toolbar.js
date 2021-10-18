@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import styled from 'styled-components';
-import useOutsideAlerter from './OutsideAlerter.js';
+import useOutsideAlerter from '../Hooks/useOutsideAlerter.js';
 
 const ATCSidebar = styled.div`
   position: relative;
