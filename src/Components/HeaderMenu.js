@@ -13,7 +13,6 @@ const StyledBaseMenu = styled.div`
 const StyledMenu = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
   padding: 0 30px;
   margin: 0 auto;
   width: 1190px;
@@ -41,7 +40,7 @@ const menuObjects = [
 
 const StyledUnorderedList = styled.ul`
   display: flex;
-  width: 100%;
+  width: auto;
 `;
 
 const HeaderMenu = () => {
