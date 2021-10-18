@@ -1,6 +1,6 @@
 import { useState, useContext, createContext } from 'react';
 import { ThemeProvider } from 'styled-components';
-import { lightTheme, darkTheme } from '../../themes.js';
+import { lightTheme, darkTheme } from '../themes.js';
 
 const ThemeContext = createContext(null);
 

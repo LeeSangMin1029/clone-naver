@@ -3,7 +3,7 @@ import Keyboard from './Keyboard.js';
 import ExpandArrow from './ExpandArrow.js';
 import SearchButton from './SearchButton.js';
 import Toolbar from './Toolbar.js';
-import { useMenuContext } from './Context/useMenuContext.js';
+import { useMenuContext } from '../Context/useMenuContext.js';
 
 const SearchStyle = styled.div`
   width: 620px;

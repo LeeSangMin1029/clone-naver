@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Logo from './Logo.js';
 import SearchForm from './SearchForm.js';
 import Service from './Service.js';
-import { MenuProvider } from './Context/useMenuContext.js';
+import { MenuProvider } from '../Context/useMenuContext.js';
 import HeaderMenu from './HeaderMenu.js';
 
 const StyledHeader = styled.div`

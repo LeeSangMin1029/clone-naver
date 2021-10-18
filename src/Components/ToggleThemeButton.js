@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { useThemeContext } from './Context/useThemeContext.js';
+import { useThemeContext } from '../Context/useThemeContext.js';
 
 const StyledThemeButton = styled.button`
   position: fixed;
