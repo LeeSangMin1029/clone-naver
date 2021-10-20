@@ -1,5 +1,8 @@
+// style
 import styled from 'styled-components';
-import MenuItem from './MenuItem.js';
+
+// components
+import HeaderMenuItem from './HeaderMenuItem';
 
 const StyledBaseMenu = styled.div`
   display: flex;
@@ -46,9 +49,9 @@ const StyledUnorderedList = styled.ul`
 const HeaderMenu = () => {
   const items = menuObjects.map((item, index) => {
     return (
-      <MenuItem key={index} className={item.className} href={item.href}>
+      <HeaderMenuItem key={index} className={item.className} href={item.href}>
         {item.name}
-      </MenuItem>
+      </HeaderMenuItem>
     );
   });
 

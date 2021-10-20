@@ -1,5 +1,8 @@
+// style
 import styled from 'styled-components';
-import { ReactComponent as KeyboardImage } from '../svg/keyboard.svg';
+
+// svg
+import { ReactComponent as KeyboardImage } from './keyboard.svg';
 
 const KeyboardStyle = styled.div`
   margin-right: 12px;
@@ -12,7 +15,7 @@ const KeyboardStyle = styled.div`
   }
 `;
 
-const Keyboard = () => {
+const KeyboardIcon = () => {
   return (
     <KeyboardStyle>
       <KeyboardImage fill="#CCD1D1" width="25px" height="15px" />
@@ -20,4 +23,4 @@ const Keyboard = () => {
   );
 };
 
-export default Keyboard;
+export default KeyboardIcon;

@@ -1,9 +1,16 @@
+// styled
 import styled from 'styled-components';
-import Keyboard from './Keyboard.js';
-import ExpandArrow from './ExpandArrow.js';
-import SearchButton from './SearchButton.js';
-import Toolbar from './Toolbar.js';
-import { useMenuContext } from '../Context/useMenuContext.js';
+
+// components with svg
+import KeyboardIcon from './KeyboardIcon';
+import ToggleButton from './ToggleButton';
+import SearchButton from './SearchButton';
+
+// component
+import Toolbar from './Toolbar';
+
+// context
+import { useMenuContext } from 'context/useMenuContext';
 
 const SearchStyle = styled.div`
   width: 620px;
@@ -37,8 +44,8 @@ const SearchForm = () => {
       <Toolbar isOpen={isOpen} setMenu={setMenu} />
       <form action="/" method="get" name="serach" />
       <Input type="text" form="search" id="header-search" name="search" />
-      <Keyboard />
-      <ExpandArrow toggleMenu={toggleMenu} isOpen={isOpen} />
+      <KeyboardIcon />
+      <ToggleButton toggleMenu={toggleMenu} isOpen={isOpen} />
       <SearchButton />
     </SearchStyle>
   );

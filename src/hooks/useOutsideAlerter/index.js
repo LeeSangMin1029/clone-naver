@@ -1,3 +1,4 @@
+// react function
 import { useEffect } from 'react';
 
 const useOutsideAlerter = (ref, func = () => {}) => {

@@ -1,5 +1,8 @@
+// style
 import styled from 'styled-components';
-import ToggleThemeButton from './ToggleThemeButton.js';
+
+// components
+import ThemeToggleButton from './ThemeToggleButton';
 
 const StyledContents = styled.div`
   width: 1130px;
@@ -7,12 +10,12 @@ const StyledContents = styled.div`
   margin: 0 auto;
 `;
 
-const Container = () => {
+const HomePageContainer = () => {
   return (
     <StyledContents>
-      <ToggleThemeButton />
+      <ThemeToggleButton />
     </StyledContents>
   );
 };
 
-export default Container;
+export default HomePageContainer;

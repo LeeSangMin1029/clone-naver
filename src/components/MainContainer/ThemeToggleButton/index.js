@@ -1,5 +1,8 @@
+// style
 import styled from 'styled-components';
-import { useThemeContext } from '../Context/useThemeContext.js';
+
+// context
+import { useThemeContext } from 'context/useThemeContext';
 
 const StyledThemeButton = styled.button`
   position: fixed;
@@ -37,7 +40,7 @@ const StyledThemeButton = styled.button`
   }
 `;
 
-const ToggleThemeButton = () => {
+const ThemeToggleButton = () => {
   const { setTheme, currentTheme } = useThemeContext();
   const themeToggler = () => {
     currentTheme === 'light' ? setTheme('dark') : setTheme('light');
@@ -45,4 +48,4 @@ const ToggleThemeButton = () => {
   return <StyledThemeButton onClick={themeToggler}>{currentTheme === 'light' ? '다크 모드로' : '라이트 모드로'}</StyledThemeButton>;
 };
 
-export default ToggleThemeButton;
+export default ThemeToggleButton;

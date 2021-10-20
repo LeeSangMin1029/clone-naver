@@ -1,3 +1,4 @@
+// style
 import styled from 'styled-components';
 
 const Contents = styled.div`
@@ -70,7 +71,7 @@ const SetStartPageLink = styled.div`
   }
 `;
 
-const Service = () => {
+const ExternalServiceArea = () => {
   return (
     <Contents>
       <SetStartPageLink>
@@ -87,4 +88,4 @@ const Service = () => {
   );
 };
 
-export default Service;
+export default ExternalServiceArea;

@@ -1,9 +1,16 @@
+// style
 import styled from 'styled-components';
-import Logo from './Logo.js';
-import SearchForm from './SearchForm.js';
-import Service from './Service.js';
-import { MenuProvider } from '../Context/useMenuContext.js';
-import HeaderMenu from './HeaderMenu.js';
+
+// domain
+import HeaderMenu from 'domain/HeaderMenu';
+
+// components
+import Logo from './Logo';
+import SearchForm from 'components/SearchForm';
+import ExternalServiceArea from 'components/MainHeader/ExternalServiceArea';
+
+// context
+import { MenuProvider } from 'context/useMenuContext';
 
 const StyledHeader = styled.div`
   width: 100%;
@@ -28,7 +35,7 @@ const Contents = styled.div`
   justify-content: space-between;
 `;
 
-const Header = () => {
+const MainHeader = () => {
   return (
     <StyledHeader>
       <WrapperTopHeader>
@@ -38,7 +45,7 @@ const Header = () => {
             <MenuProvider>
               <SearchForm />
             </MenuProvider>
-            <Service />
+            <ExternalServiceArea />
           </Contents>
         </StyledTopHeader>
       </WrapperTopHeader>
@@ -47,4 +54,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default MainHeader;

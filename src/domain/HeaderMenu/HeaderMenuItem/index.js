@@ -1,3 +1,4 @@
+// style
 import styled from 'styled-components';
 
 const StyledListItem = styled.li`
@@ -49,7 +50,7 @@ const StyledLink = styled.a`
   }
 `;
 
-const MenuItem = ({ children, href, className }) => {
+const HeaderMenuItem = ({ children, href, className }) => {
   return (
     <StyledListItem>
       <StyledLink href={href} className={className}>
@@ -59,4 +60,4 @@ const MenuItem = ({ children, href, className }) => {
   );
 };
 
-export default MenuItem;
+export default HeaderMenuItem;

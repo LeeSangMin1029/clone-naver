@@ -1,5 +1,8 @@
+// style
 import styled from 'styled-components';
-import { ReactComponent as DownArrow } from '../svg/arrow-down.svg';
+
+// svg
+import { ReactComponent as DownArrow } from './arrow-down.svg';
 
 const EmptyInput = styled.input`
   display: none;
@@ -29,7 +32,7 @@ const EmptyLabel = styled.label`
   display: contents;
 `;
 
-const ExpandArrow = ({ isOpen, toggleMenu }) => {
+const ToggleButton = ({ isOpen, toggleMenu }) => {
   return (
     <ArrowStyle>
       <EmptyInput type="checkbox" id="menu-button" onChange={toggleMenu} checked={isOpen} />
@@ -40,4 +43,4 @@ const ExpandArrow = ({ isOpen, toggleMenu }) => {
   );
 };
 
-export default ExpandArrow;
+export default ToggleButton;

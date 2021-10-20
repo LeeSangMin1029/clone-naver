@@ -1,3 +1,4 @@
+// styled
 import { createGlobalStyle } from 'styled-components';
 
 export const lightTheme = {
