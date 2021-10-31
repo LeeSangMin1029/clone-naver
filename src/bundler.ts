@@ -1,7 +1,17 @@
-import { exec } from 'https://deno.land/x/exec@0.0.5/mod.ts';
-const configFile = '--config ../deno.json';
-const importMap = '--importmap=../import_map.json ';
-const inSrc = './components/';
-const outSrc = '../public/js/';
-const command = `deno bundle ${configFile} ${importMap} ${inSrc}client.tsx ${outSrc}client.js`;
-await exec(command);
+const p = Deno.run({
+  cmd: [
+    'deno',
+    'bundle',
+    '--config',
+    'deno.json',
+    '--importmap=import_map.json',
+    'src/components/client.tsx',
+    'public/js/client.js',
+  ],
+});
+const code = await p.status();
+if (code.success) {
+  console.log('bundling success!!');
+} else {
+  console.log('bundling failure..');
+}

@@ -16,4 +16,5 @@ app.addEventListener('listen', ({ hostname, port, secure }) => {
   const url = `${protocol}${hostname ?? 'localhost'}:${port}`;
   console.log(`${green('Listening on')}: ${yellow(url)}`);
 });
+await import('./bundler.ts');
 await app.listen({ port: 8000 });
