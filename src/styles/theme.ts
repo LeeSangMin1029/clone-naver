@@ -1,7 +1,7 @@
 // styled
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, DefaultTheme } from 'styled-components';
 
-export const lightTheme = {
+export const lightTheme: DefaultTheme = {
   body: '#fff',
   header: '#fff',
   bg_startLink: '#fff',
@@ -22,7 +22,7 @@ export const lightTheme = {
   themeBtnImgHover: '#fce303',
 };
 
-export const darkTheme = {
+export const darkTheme: DefaultTheme = {
   body: '#1e1f21',
   header: '#292a2d',
   bg_startLink: '#464646',
@@ -45,7 +45,6 @@ export const darkTheme = {
 
 export const GlobalStyles = createGlobalStyle`
   body{
-    background-color: ${({ theme }) => theme.body};
     height: 100vh;
   }
   *{

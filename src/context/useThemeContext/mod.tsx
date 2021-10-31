@@ -1,20 +1,24 @@
 // react function
-import { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 // style
 import { ThemeProvider } from 'styled-components';
 
 // components
-import { lightTheme, darkTheme } from 'components/Theme';
+import { lightTheme, darkTheme } from 'styles/theme.ts';
 
-const ThemeContext = createContext(null);
+type IContextProps = {
+  theme: string;
+  setTheme: React.Dispatch<React.SetStateAction<string>>;
+};
 
-const WrapperThemeProvider = ({ children }) => {
+const ThemeContext = createContext({} as IContextProps);
+
+const WrapperThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [theme, setTheme] = useState('light');
-  const currentTheme = theme;
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-      <ThemeContext.Provider value={{ currentTheme, setTheme }}>{children}</ThemeContext.Provider>
+      <ThemeContext.Provider value={{ theme, setTheme }}>{children}</ThemeContext.Provider>
     </ThemeProvider>
   );
 };

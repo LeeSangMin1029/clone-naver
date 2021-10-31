@@ -1,16 +1,17 @@
 // style
+import React from 'react';
 import styled from 'styled-components';
 
 // domain
-import HeaderMenu from 'domain/HeaderMenu';
+import HeaderMenu from 'domain/HeaderMenu/mod.tsx';
 
 // components
-import Logo from './Logo';
-import SearchForm from 'components/SearchForm';
-import ExternalServiceArea from 'components/MainHeader/ExternalServiceArea';
+import Logo from './Logo/mod.tsx';
+import SearchForm from 'components/SearchForm/mod.tsx';
+import ExternalServiceArea from 'components/MainHeader/ExternalServiceArea/mod.tsx';
 
 // context
-import { MenuProvider } from 'context/useMenuContext';
+import { MenuProvider } from 'context/useMenuContext/mod.tsx';
 
 const StyledHeader = styled.div`
   width: 100%;

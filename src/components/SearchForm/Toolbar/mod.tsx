@@ -1,18 +1,22 @@
 // react function
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 
 // styled
 import styled from 'styled-components';
 
 // react custom hooks
-import useOutsideAlerter from 'hooks/useOutsideAlerter';
+import useOutsideAlerter from 'hooks/useOutsideAlerter/mod.tsx';
+
+interface IMenu {
+  isOpen: boolean;
+}
 
 const ATCSidebar = styled.div`
   position: relative;
   right: 2px;
 `;
 
-const Menu = styled.div`
+const Menu = styled.div<IMenu>`
   display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
   align-items: center;
   justify-content: space-between;
@@ -52,7 +56,7 @@ const ACTOffMenu = styled.div`
   }
 `;
 
-const CustomLink = ({ href, string }) => {
+const CustomLink = ({ href, string }: { href: string; string: string }) => {
   return (
     <span>
       <a href={href}>{string}</a>
@@ -60,10 +64,10 @@ const CustomLink = ({ href, string }) => {
   );
 };
 
-const Toolbar = ({ isOpen, setMenu }) => {
-  const toggleMenu = (e) => {
+const Toolbar = ({ isOpen, setMenu }: { isOpen: boolean; setMenu: React.Dispatch<React.SetStateAction<boolean>> }) => {
+  const toggleMenu = (e: any) => {
     const arrow = document.getElementById('arrow-icon');
-    if (e.target === arrow || e.target === arrow.childNodes[0]) return;
+    if (e.target === arrow || e.target === arrow?.childNodes[0]) return;
     setMenu(false);
   };
 

@@ -1,3 +1,4 @@
+import React from 'react';
 // style
 import styled from 'styled-components';
 
@@ -50,7 +51,7 @@ const StyledLink = styled.a`
   }
 `;
 
-const HeaderMenuItem = ({ children, href, className }) => {
+const HeaderMenuItem = ({ children, href, className }: { children: React.ReactNode; href: string; className: string }) => {
   return (
     <StyledListItem>
       <StyledLink href={href} className={className}>

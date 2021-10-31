@@ -1,8 +1,9 @@
+import React from 'react';
 // style
 import styled from 'styled-components';
 
 // components
-import HeaderMenuItem from './HeaderMenuItem';
+import HeaderMenuItem from './HeaderMenuItem/mod.tsx';
 
 const StyledBaseMenu = styled.div`
   display: flex;

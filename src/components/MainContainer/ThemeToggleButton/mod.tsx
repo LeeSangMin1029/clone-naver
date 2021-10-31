@@ -1,8 +1,10 @@
+import React from 'react';
+
 // style
 import styled from 'styled-components';
 
 // context
-import { useThemeContext } from 'context/useThemeContext';
+import { useThemeContext } from 'context/useThemeContext/mod.tsx';
 
 const StyledThemeButton = styled.button`
   position: fixed;
@@ -41,11 +43,11 @@ const StyledThemeButton = styled.button`
 `;
 
 const ThemeToggleButton = () => {
-  const { setTheme, currentTheme } = useThemeContext();
+  const { setTheme, theme } = useThemeContext();
   const themeToggler = () => {
-    currentTheme === 'light' ? setTheme('dark') : setTheme('light');
+    theme === 'light' ? setTheme('dark') : setTheme('light');
   };
-  return <StyledThemeButton onClick={themeToggler}>{currentTheme === 'light' ? '다크 모드로' : '라이트 모드로'}</StyledThemeButton>;
+  return <StyledThemeButton onClick={themeToggler}>{theme === 'light' ? '다크 모드로' : '라이트 모드로'}</StyledThemeButton>;
 };
 
 export default ThemeToggleButton;

@@ -1,16 +1,18 @@
+import React from 'react';
+
 // styled
 import styled from 'styled-components';
 
 // components with svg
-import KeyboardIcon from './KeyboardIcon';
-import ToggleButton from './ToggleButton';
-import SearchButton from './SearchButton';
+import KeyboardIcon from './KeyboardIcon/mod.tsx';
+import ToggleButton from './ToggleButton/mod.tsx';
+import SearchButton from './SearchButton/mod.tsx';
 
 // component
-import Toolbar from './Toolbar';
+import Toolbar from './Toolbar/mod.tsx';
 
 // context
-import { useMenuContext } from 'context/useMenuContext';
+import { useMenuContext } from 'context/useMenuContext/mod.tsx';
 
 const SearchStyle = styled.div`
   width: 620px;
@@ -36,7 +38,7 @@ const Input = styled.input`
 
 const SearchForm = () => {
   const { isOpen, setMenu } = useMenuContext();
-  const toggleMenu = (e) => {
+  const toggleMenu = (e: any) => {
     setMenu(e.target.checked);
   };
   return (

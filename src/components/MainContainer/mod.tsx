@@ -1,8 +1,10 @@
+import React from 'react';
+
 // style
 import styled from 'styled-components';
 
 // components
-import ThemeToggleButton from './ThemeToggleButton';
+import ThemeToggleButton from './ThemeToggleButton/mod.tsx';
 
 const StyledContents = styled.div`
   width: 1130px;

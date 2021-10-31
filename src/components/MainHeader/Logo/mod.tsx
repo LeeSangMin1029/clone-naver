@@ -1,3 +1,4 @@
+import React from 'react';
 // style
 import styled from 'styled-components';
 
@@ -9,7 +10,7 @@ const Link = styled.a`
 const Logo = () => {
   return (
     <Link href="/">
-      <img alt="logo" src="/img/logo_green.png" objectfit="fill" layout="fill" quality={100} width={165} height={32} />
+      <img alt="logo" src="/public/img/logo_green.png" width={165} height={32} />
     </Link>
   );
 };
