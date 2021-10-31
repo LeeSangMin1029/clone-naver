@@ -3,9 +3,14 @@
     "start": {
       "cmd": "deno run --config ./deno.json --importmap=./import_map.json ./src/server.ts",
       "desc": "run my ./src/server.ts file",
-      "allow": ["read", "net"],
+      "allow": ["read", "net", "run"],
       "unstable": true
     },
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "watcher": {
+    "exts": ["js", "jsx", "ts", "tsx", "json"],
+    "match": ["./src/*.*"],
+    "skip": ["./public/*"]
   }
 }
