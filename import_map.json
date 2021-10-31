@@ -1,0 +1,18 @@
+{
+  "imports": {
+    "react": "https://esm.sh/react@17.0.2",
+    "react-dom": "https://esm.sh/react-dom@17.0.2",
+    "dom-server": "https://esm.sh/react-dom@17.0.2/server",
+    "styled-components": "https://esm.sh/styled-components",
+    "oak": "https://deno.land/x/oak@v9.0.1/mod.ts",
+    "path": "https://deno.land/std@0.100.0/path/mod.ts",
+    "fmt-color": "https://deno.land/std@0.53.0/fmt/colors.ts",
+    "controller/": "./src/controller/",
+    "routes/": "./src/routes/",
+    "components/": "./src/components/",
+    "context/": "./src/context/",
+    "domain/": "./src/domain/",
+    "hooks/": "./src/hooks/",
+    "styles/": "./src/styles/"
+  }
+}
