@@ -1,6 +1,6 @@
 import React from 'react';
 import server from 'dom-server';
-import Render from 'components/render.tsx';
+import Render from 'components/Render.tsx';
 import { GlobalStyles } from 'styles/theme.ts';
 import { ServerStyleSheet } from 'styled-components';
 
