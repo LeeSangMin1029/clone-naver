@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 // components
 import HeaderMenuItem from './HeaderMenuItem/mod.tsx';
+import Weather from './Weather/mod.tsx';
 
 const StyledBaseMenu = styled.div`
   display: flex;
@@ -17,6 +18,7 @@ const StyledBaseMenu = styled.div`
 const StyledMenu = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 30px;
   margin: 0 auto;
   width: 1190px;
@@ -55,11 +57,11 @@ const HeaderMenu = () => {
       </HeaderMenuItem>
     );
   });
-
   return (
     <StyledBaseMenu>
       <StyledMenu>
         <StyledUnorderedList>{items}</StyledUnorderedList>
+        <Weather />
       </StyledMenu>
     </StyledBaseMenu>
   );

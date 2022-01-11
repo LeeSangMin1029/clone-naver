@@ -14269,6 +14269,80 @@ const HeaderMenuItem = ({ children , href , className  })=>{
         className: className
     }, children));
 };
+const WeatherLink = tn.a`
+  &:hover {
+    color: black;
+  }
+  &:visited {
+    color: black;
+  }
+`;
+const StyledWeather = tn(WeatherLink)`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: auto;
+  cursor: pointer;
+  user-select: none;
+`;
+const StyledTempFont = tn.span`
+  font-weight: 800;
+  font-size: 15px;
+  margin-right: 8px;
+`;
+const StyledCity = tn.span`
+  font-weight: 500;
+  font-size: 13px;
+  color: grey;
+`;
+const weatherDescription = {
+    'clear sky': '맑음',
+    'few clouds': '구름 많음',
+    'scattered clouds': '흐림',
+    'broken clouds': '먹구름',
+    'shower rain': '소나기',
+    rain: '비',
+    thunderstorm: '천둥번개',
+    snow: '눈',
+    mist: '안개'
+};
+function Weather() {
+    const [weather, setWeather] = qe({
+        icon: '',
+        description: '',
+        temp: 0,
+        name: ''
+    });
+    async function getWeather() {
+        const url = `http://localhost:3000/weather/Seoul`;
+        const serverData = await fetch(url);
+        const { data  } = await serverData.json();
+        const { main: { temp  } , weather: [{ icon , description  }] , name ,  } = data;
+        setWeather({
+            ...weather,
+            icon,
+            description,
+            temp,
+            name
+        });
+    }
+    xe(()=>{
+        getWeather();
+    }, []);
+    try {
+        console.log(weather);
+    } catch (err) {
+        console.error(err);
+    }
+    const { description , icon , temp , name: city  } = weather;
+    return export_default1.createElement(StyledWeather, {
+        href: "https://weather.naver.com/today/09650103"
+    }, export_default1.createElement("img", {
+        src: `http://openweathermap.org/img/wn/${icon}@2x.png`,
+        width: "50",
+        height: "50"
+    }), export_default1.createElement(StyledTempFont, null, `${temp}º`), export_default1.createElement(StyledTempFont, null, weatherDescription[description]), export_default1.createElement(StyledCity, null, city));
+}
 const StyledBaseMenu = tn.div`
   display: flex;
   justify-content: center;
@@ -14280,6 +14354,7 @@ const StyledBaseMenu = tn.div`
 const StyledMenu = tn.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 30px;
   margin: 0 auto;
   width: 1190px;
@@ -14379,7 +14454,7 @@ const HeaderMenu = ()=>{
             href: item.href
         }, item.name);
     });
-    return export_default1.createElement(StyledBaseMenu, null, export_default1.createElement(StyledMenu, null, export_default1.createElement(StyledUnorderedList, null, items)));
+    return export_default1.createElement(StyledBaseMenu, null, export_default1.createElement(StyledMenu, null, export_default1.createElement(StyledUnorderedList, null, items), export_default1.createElement(Weather, null)));
 };
 const Link = tn.a`
   user-select: none;
@@ -14889,4 +14964,4 @@ const HomePageContainer = ()=>{
 function App() {
     return export_default1.createElement(WrapperThemeProvider, null, export_default1.createElement(MainHeader, null), export_default1.createElement(HomePageContainer, null));
 }
-export_default7.hydrate(export_default1.createElement(App, null), document.getElementById('root'));
+export_default7.hydrate(export_default1.createElement(export_default1.StrictMode, null, export_default1.createElement(App, null)), document.getElementById('root'));
