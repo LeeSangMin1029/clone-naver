@@ -10,7 +10,6 @@
   },
   "watcher": {
     "exts": ["js", "jsx", "ts", "tsx", "json"],
-    "match": ["./src/*.*"],
-    "skip": ["./public/*"]
+    "match": ["./src/**"]
   }
 }
