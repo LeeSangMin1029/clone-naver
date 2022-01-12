@@ -20,6 +20,9 @@ const WeatherLink = styled.a`
   &:hover {
     color: black;
   }
+  &:hover span:nth-child(4) {
+    text-decoration: underline grey;
+  }
   &:visited {
     color: black;
   }
@@ -30,7 +33,6 @@ const StyledWeather = styled(WeatherLink)`
   align-items: center;
   justify-content: flex-end;
   width: auto;
-  cursor: pointer;
   user-select: none;
 `;
 
@@ -85,7 +87,7 @@ export default function Weather() {
   }
   const { description, icon, temp, name: city } = weather;
   return (
-    <StyledWeather href="https://weather.naver.com/today/09650103">
+    <StyledWeather href="https://weather.naver.com/today">
       <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} width="50" height="50" />
       <StyledTempFont>{`${temp}º`}</StyledTempFont>
       <StyledTempFont>{weatherDescription[description]}</StyledTempFont>
