@@ -2,6 +2,7 @@ import React from 'react';
 
 // style
 import styled from 'styled-components';
+import { fontFamilyStyle } from 'utils/mod.ts';
 
 // context
 import { useThemeContext } from 'context/useThemeContext/mod.tsx';
@@ -21,15 +22,9 @@ const StyledThemeButton = styled.button`
   cursor: pointer;
 
   :before {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
+    ${fontFamilyStyle};
     content: '${({ theme }) => theme.themeContent}';
     color: ${({ theme }) => theme.themeBtnImg};
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
     margin-right: 5px;
   }
 
@@ -47,7 +42,11 @@ const ThemeToggleButton = () => {
   const themeToggler = () => {
     theme === 'light' ? setTheme('dark') : setTheme('light');
   };
-  return <StyledThemeButton onClick={themeToggler}>{theme === 'light' ? '다크 모드로' : '라이트 모드로'}</StyledThemeButton>;
+  return (
+    <StyledThemeButton onClick={themeToggler}>
+      {theme === 'light' ? '다크 모드로' : '라이트 모드로'}
+    </StyledThemeButton>
+  );
 };
 
 export default ThemeToggleButton;

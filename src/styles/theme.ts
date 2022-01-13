@@ -2,17 +2,19 @@
 import { createGlobalStyle, DefaultTheme } from 'styled-components';
 
 export const lightTheme: DefaultTheme = {
-  body: '#fff',
-  header: '#fff',
+  colors: {
+    body: '#fff',
+    header: '#fff',
+    link: 'gray',
+    word: '#000',
+  },
+  green: '#19ce60',
   bg_startLink: '#fff',
   startLinkShadow: '#d0d3d9',
   startLinkColor: '#404040',
   borderBottom: '#e4e8eb',
-  toolbar: 'grey',
   toolbarBackground: '#f8f9f9',
   toolbarShadow: '#d0d3d9',
-  inputColor: '#000',
-  menuWordColor: '#000',
   themeContent: '\f186',
   bg_themeBtn: '#fff',
   bg_themeBtnHover: '#404040',
@@ -23,17 +25,19 @@ export const lightTheme: DefaultTheme = {
 };
 
 export const darkTheme: DefaultTheme = {
-  body: '#1e1f21',
-  header: '#292a2d',
+  colors: {
+    body: '#1e1f21',
+    header: '#292a2d',
+    link: '#8f8f8f',
+    word: '#fff',
+  },
+  green: '#19ce60',
   bg_startLink: '#464646',
   startLinkShadow: '#202020',
   startLinkColor: '#a8a8a8',
   borderBottom: '#3a3b3d',
-  toolbar: '#8f8f8f',
   toolbarBackground: '#242527',
   toolbarShadow: '#212121',
-  inputColor: '#fff',
-  menuWordColor: '#fff',
   themeContent: '\f185',
   bg_themeBtn: '#333638',
   bg_themeBtnHover: '#53575c',

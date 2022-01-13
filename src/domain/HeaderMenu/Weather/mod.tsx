@@ -2,25 +2,11 @@ import React, { useState, useEffect } from 'react';
 // style
 import styled from 'styled-components';
 
-// type
-type DescriptionType = {
-  [key: string]: string;
-  'clear sky': string;
-  'few clouds': string;
-  'scattered clouds': string;
-  'broken clouds': string;
-  'shower rain': string;
-  rain: string;
-  thunderstorm: string;
-  snow: string;
-  mist: string;
-};
-
 const WeatherLink = styled.a`
   &:hover {
     color: black;
   }
-  &:hover span:nth-child(4) {
+  &:hover span:nth-child(3) {
     text-decoration: underline grey;
   }
   &:visited {
@@ -44,20 +30,8 @@ const StyledTempFont = styled.span`
 const StyledCity = styled.span`
   font-weight: 500;
   font-size: 13px;
-  color: grey;
+  color: ${({ theme }) => theme.colors.link};
 `;
-
-const weatherDescription: DescriptionType = {
-  'clear sky': '맑음',
-  'few clouds': '구름 많음',
-  'scattered clouds': '흐림',
-  'broken clouds': '먹구름',
-  'shower rain': '소나기',
-  rain: '비',
-  thunderstorm: '천둥번개',
-  snow: '눈',
-  mist: '안개',
-};
 
 export default function Weather() {
   const [weather, setWeather] = useState({
@@ -90,7 +64,6 @@ export default function Weather() {
     <StyledWeather href="https://weather.naver.com/today">
       <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} width="50" height="50" />
       <StyledTempFont>{`${temp}º`}</StyledTempFont>
-      <StyledTempFont>{weatherDescription[description]}</StyledTempFont>
       <StyledCity>{city}</StyledCity>
     </StyledWeather>
   );

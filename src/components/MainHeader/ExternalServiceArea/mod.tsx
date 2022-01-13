@@ -1,6 +1,7 @@
 import React from 'react';
 // style
 import styled from 'styled-components';
+import { fontFamilyStyle } from 'utils/mod.ts';
 
 const Contents = styled.div`
   align-self: flex-start;
@@ -26,7 +27,7 @@ const Junior = styled.a`
     color: #ffc107;
   }
   :hover span:nth-child(4) {
-    color: #19ce60;
+    color: ${({ theme }) => theme.green};
   }
 `;
 
@@ -36,7 +37,7 @@ const HappyBean = styled.a`
   font-size: 12px;
 
   :hover {
-    color: #19ce60;
+    color: ${({ theme }) => theme.green};
   }
 `;
 
@@ -52,14 +53,8 @@ const SetStartPageLink = styled.div`
     text-decoration: underline;
   }
   a:after {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
+    ${fontFamilyStyle}
     content: '\f054';
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
     margin: 0 5px;
     box-shadow: 0px 2px 3px 1px ${({ theme }) => theme.startLinkShadow};
     border-radius: 100%;
@@ -76,7 +71,9 @@ const ExternalServiceArea = () => {
   return (
     <Contents>
       <SetStartPageLink>
-        <a href="https://help.naver.com/support/contents/contents.help?serviceNo=1074&categoryNo=16719">네이버를 시작페이지로</a>
+        <a href="https://help.naver.com/support/contents/contents.help?serviceNo=1074&categoryNo=16719">
+          네이버를 시작페이지로
+        </a>
       </SetStartPageLink>
       <Junior href="https://jr.naver.com/">
         <span>쥬</span>

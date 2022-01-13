@@ -15,7 +15,7 @@ import { MenuProvider } from 'context/useMenuContext/mod.tsx';
 
 const StyledHeader = styled.div`
   width: 100%;
-  background-color: ${({ theme }) => theme.header};
+  background-color: ${({ theme }) => theme.colors.header};
 `;
 
 const WrapperTopHeader = styled.div`

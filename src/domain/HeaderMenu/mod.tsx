@@ -34,14 +34,14 @@ const menuObjects = [
   { name: '쇼핑', className: 'color live', href: 'https://shoppinglive.naver.com/home' },
   { name: 'Pay', className: 'color', href: 'https://order.pay.naver.com/home' },
   { name: 'TV', className: 'color tv', href: 'https://tv.naver.com/' },
-  { name: '사전', className: '', href: 'https://dict.naver.com/' },
-  { name: '뉴스', className: '', href: 'https://news.naver.com/' },
-  { name: '증권', className: '', href: 'https://finance.naver.com/' },
-  { name: '부동산', className: '', href: 'https://land.naver.com/' },
-  { name: '지도', className: '', href: 'https://map.naver.com/' },
-  { name: 'VIBE', className: '', href: 'https://vibe.naver.com/' },
-  { name: '책', className: '', href: 'https://book.naver.com/' },
-  { name: '웹툰', className: '', href: 'https://comic.naver.com/' },
+  { name: '사전', href: 'https://dict.naver.com/' },
+  { name: '뉴스', href: 'https://news.naver.com/' },
+  { name: '증권', href: 'https://finance.naver.com/' },
+  { name: '부동산', href: 'https://land.naver.com/' },
+  { name: '지도', href: 'https://map.naver.com/' },
+  { name: 'VIBE', href: 'https://vibe.naver.com/' },
+  { name: '책', href: 'https://book.naver.com/' },
+  { name: '웹툰', href: 'https://comic.naver.com/' },
 ];
 
 const StyledUnorderedList = styled.ul`
@@ -52,7 +52,7 @@ const StyledUnorderedList = styled.ul`
 const HeaderMenu = () => {
   const items = menuObjects.map((item, index) => {
     return (
-      <HeaderMenuItem key={index} className={item.className} href={item.href}>
+      <HeaderMenuItem key={index} className={item.className || ''} href={item.href}>
         {item.name}
       </HeaderMenuItem>
     );

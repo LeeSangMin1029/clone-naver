@@ -39,12 +39,12 @@ const UserTool = styled.div`
   padding-left: 10px;
   // 도움말 링크
   span:nth-child(1) a {
-    color: ${({ theme }) => theme.toolbar};
+    color: ${({ theme }) => theme.colors.link};
   }
   // 신고 링크
   span:nth-child(2) a {
     padding-left: 10px;
-    color: #03c75a;
+    color: ${({ theme }) => theme.green};
   }
 `;
 
@@ -52,7 +52,7 @@ const ACTOffMenu = styled.div`
   padding-right: 10px;
   // 자동완성 끄기 링크
   a {
-    color: ${({ theme }) => theme.toolbar};
+    color: ${({ theme }) => theme.colors.link};
   }
 `;
 
@@ -64,7 +64,13 @@ const CustomLink = ({ href, string }: { href: string; string: string }) => {
   );
 };
 
-const Toolbar = ({ isOpen, setMenu }: { isOpen: boolean; setMenu: React.Dispatch<React.SetStateAction<boolean>> }) => {
+const Toolbar = ({
+  isOpen,
+  setMenu,
+}: {
+  isOpen: boolean;
+  setMenu: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
   const toggleMenu = (e: any) => {
     const arrow = document.getElementById('arrow-icon');
     if (e.target === arrow || e.target === arrow?.childNodes[0]) return;
@@ -77,8 +83,14 @@ const Toolbar = ({ isOpen, setMenu }: { isOpen: boolean; setMenu: React.Dispatch
     <ATCSidebar>
       <Menu isOpen={isOpen} ref={wrapperRef}>
         <UserTool>
-          <CustomLink href="https://help.naver.com/support/service/main.help?serviceNo=605&categoryNo=1987" string="도움말" />
-          <CustomLink href="https://help.naver.com/support/contents/contents.help?serviceNo=605&categoryNo=18215" string="신고" />
+          <CustomLink
+            href="https://help.naver.com/support/service/main.help?serviceNo=605&categoryNo=1987"
+            string="도움말"
+          />
+          <CustomLink
+            href="https://help.naver.com/support/contents/contents.help?serviceNo=605&categoryNo=18215"
+            string="신고"
+          />
         </UserTool>
         {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
         <ACTOffMenu>
