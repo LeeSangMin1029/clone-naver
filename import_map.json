@@ -13,6 +13,7 @@
     "context/": "./src/context/",
     "domain/": "./src/domain/",
     "hooks/": "./src/hooks/",
-    "styles/": "./src/styles/"
+    "styles/": "./src/styles/",
+    "utils/": "./src/utils/"
   }
 }
