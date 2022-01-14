@@ -7,6 +7,7 @@ export const lightTheme: DefaultTheme = {
     header: '#fff',
     link: 'gray',
     word: '#000',
+    button: '#fce303',
   },
   green: '#19ce60',
   bg_startLink: '#fff',
@@ -16,12 +17,6 @@ export const lightTheme: DefaultTheme = {
   toolbarBackground: '#f8f9f9',
   toolbarShadow: '#d0d3d9',
   themeContent: '\f186',
-  bg_themeBtn: '#fff',
-  bg_themeBtnHover: '#404040',
-  themeBtnImg: '#5e6267',
-  themeBtnWordHover: '#d4d4d4',
-  themeBtnWord: '#2c2c2c',
-  themeBtnImgHover: '#fce303',
 };
 
 export const darkTheme: DefaultTheme = {
@@ -30,6 +25,7 @@ export const darkTheme: DefaultTheme = {
     header: '#292a2d',
     link: '#8f8f8f',
     word: '#fff',
+    button: '#19ce60',
   },
   green: '#19ce60',
   bg_startLink: '#464646',
@@ -39,12 +35,6 @@ export const darkTheme: DefaultTheme = {
   toolbarBackground: '#242527',
   toolbarShadow: '#212121',
   themeContent: '\f185',
-  bg_themeBtn: '#333638',
-  bg_themeBtnHover: '#53575c',
-  themeBtnImg: '#c2c9d1',
-  themeBtnWordHover: '#d4d4d4',
-  themeBtnWord: '#d5d5d5',
-  themeBtnImgHover: '#00f557',
 };
 
 export const GlobalStyles = createGlobalStyle`

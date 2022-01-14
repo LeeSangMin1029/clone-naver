@@ -26,6 +26,7 @@ const StyledTempFont = styled.span`
   font-weight: 800;
   font-size: 15px;
   margin-right: 8px;
+  color: ${({ theme }) => theme.colors.word};
 `;
 const StyledCity = styled.span`
   font-weight: 500;

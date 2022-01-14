@@ -7,6 +7,7 @@ declare module 'styled-components' {
       header: string;
       link: string;
       word: string;
+      button: string;
     };
     green: string;
     bg_startLink: string;
@@ -16,11 +17,5 @@ declare module 'styled-components' {
     toolbarBackground: string;
     toolbarShadow: string;
     themeContent: string;
-    bg_themeBtn: string;
-    bg_themeBtnHover: string;
-    themeBtnImg: string;
-    themeBtnWordHover: string;
-    themeBtnWord: string;
-    themeBtnImgHover: string;
   }
 }

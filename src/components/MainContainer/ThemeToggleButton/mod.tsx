@@ -15,8 +15,8 @@ const StyledThemeButton = styled.button`
   height: 40px;
   border: 0;
   border-radius: 30px;
-  background-color: ${({ theme }) => theme.bg_themeBtn};
-  color: ${({ theme }) => theme.themeBtnWord};
+  background-color: ${({ theme }) => theme.colors.header};
+  color: ${({ theme }) => theme.colors.word};
   font-size: 12px;
   box-shadow: 0px 3px 4px 0 rgba(0 0 0 / 12%);
   cursor: pointer;
@@ -24,16 +24,16 @@ const StyledThemeButton = styled.button`
   :before {
     ${fontFamilyStyle};
     content: '${({ theme }) => theme.themeContent}';
-    color: ${({ theme }) => theme.themeBtnImg};
+    color: ${({ theme }) => theme.colors.word};
     margin-right: 5px;
   }
 
   :hover {
-    background-color: ${({ theme }) => theme.bg_themeBtnHover};
-    color: ${({ theme }) => theme.themeBtnWordHover};
+    background-color: #404040;
+    color: #fff;
   }
   :hover:before {
-    color: ${({ theme }) => theme.themeBtnImgHover};
+    color: ${({ theme }) => theme.colors.button};
   }
 `;
 
