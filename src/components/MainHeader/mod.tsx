@@ -2,13 +2,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// domain
-import HeaderMenu from 'domain/HeaderMenu/mod.tsx';
-
 // components
 import Logo from './Logo/mod.tsx';
 import SearchForm from 'components/SearchForm/mod.tsx';
 import ExternalServiceArea from 'components/MainHeader/ExternalServiceArea/mod.tsx';
+import HeaderMenu from './HeaderMenu/mod.tsx';
 
 // context
 import { MenuProvider } from 'context/useMenuContext/mod.tsx';

@@ -11,7 +11,6 @@
     "routes/": "./src/routes/",
     "components/": "./src/components/",
     "context/": "./src/context/",
-    "domain/": "./src/domain/",
     "hooks/": "./src/hooks/",
     "styles/": "./src/styles/",
     "utils/": "./src/utils/"
