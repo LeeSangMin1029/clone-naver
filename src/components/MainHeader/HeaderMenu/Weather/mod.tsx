@@ -47,10 +47,10 @@ export default function Weather() {
     const { data } = await serverData.json();
     const {
       main: { temp },
-      weather: [{ icon, description }],
+      weather: [{ icon /*description */ }],
       name,
     } = data;
-    setWeather({ ...weather, icon, description, temp, name });
+    setWeather({ ...weather, icon, /*description,*/ temp, name });
   }
   useEffect(() => {
     getWeather();
@@ -60,7 +60,7 @@ export default function Weather() {
   } catch (err) {
     console.error(err);
   }
-  const { description, icon, temp, name: city } = weather;
+  const { /*description,*/ icon, temp, name: city } = weather;
   return (
     <StyledWeather href="https://weather.naver.com/today">
       <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} width="50" height="50" />
