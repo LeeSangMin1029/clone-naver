@@ -3,6 +3,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { fontFamilyStyle } from 'utils/mod.ts';
 
+type HeaderMenuItemProps = {
+  children: React.ReactNode;
+  href: string;
+  className: string;
+};
+
 const StyledListItem = styled.li`
   list-style: none;
   margin-left: 10px;
@@ -34,15 +40,7 @@ const StyledLink = styled.a`
   }
 `;
 
-const HeaderMenuItem = ({
-  children,
-  href,
-  className,
-}: {
-  children: React.ReactNode;
-  href: string;
-  className: string;
-}) => {
+const HeaderMenuItem = ({ children, href, className }: HeaderMenuItemProps) => {
   return (
     <StyledListItem>
       <StyledLink href={href} className={className}>
