@@ -5,6 +5,7 @@ import styled from 'styled-components';
 // components
 import HeaderMenuItem from './HeaderMenuItem/mod.tsx';
 import Weather from './Weather/mod.tsx';
+import SeeMoreButton from './SeeMoreButton/mod.tsx';
 
 const StyledBaseMenu = styled.div`
   display: flex;
@@ -23,6 +24,11 @@ const StyledMenu = styled.div`
   margin: 0 auto;
   width: 1190px;
   height: 100%;
+  div {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+  }
 `;
 
 const menuObjects = [
@@ -57,10 +63,14 @@ const HeaderMenu = () => {
       </HeaderMenuItem>
     );
   });
+
   return (
     <StyledBaseMenu>
       <StyledMenu>
-        <StyledUnorderedList>{items}</StyledUnorderedList>
+        <div>
+          <StyledUnorderedList>{items}</StyledUnorderedList>
+          <SeeMoreButton />
+        </div>
         <Weather />
       </StyledMenu>
     </StyledBaseMenu>
